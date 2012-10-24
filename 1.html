@@ -1,0 +1,17 @@
+<!doctype>
+<html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+<p>
+Method #1 Simple Integration, [this is a simple paypal button add to cart, after clicking it, the page is directed to buyer's paypal account in the shopping cart page to verify the transaction, create the button by logging in at the sandbox.paypal.com  using your merchant account and refer to the documentation
+on instruction on how to create the add to cart button
+</p>
+<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ARDF7EMPG4X3E">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</html>

@@ -1,0 +1,139 @@
+Order Goods
+Express Checkout
+Prerequisites to Express Checkout include the kind of PayPal accounts you need as well as the
+required programming skills and experience. If you want to use Express Checkout but do not
+have the required skills or experience, you should consider using PayPal Payments Standard
+(previously known as Website Payments Standard) or a shopping cart provided by PayPal or a
+third party.
+
+- Go to the PayPal Button Code page (https://www.paypal.com/express-checkout-buttons).
+copy the html source
+Paypal with other payment methods : pay thru paypal, or pay through visa or master credit cards
+
+obtain api credentials :signature or certificate
+
+Integration sample pg 19 -- 
+
+
+Express Checkout Advanced Features Guide
+
+- enables the merchant to customize  look of checkout page on paypal and promotion of other products pg. 19 -- 
+
+Important checkout values :
+item total, tax, shipping and handling
+shipping discount, insurance
+
+question where and how should per product discount, total discount, percentage per product discount ,percentage total discount, and other gc or coupons are customized?
+
+Express Checkout Redirect to Let Buyers Pay on PayPal
+The following sample code shows the redirect to let buyers pay on PayPal:
+https://www.paypal.com/cgi-bin/webscr?cmd=_expresscheckout&
+useraction=commit&token=valueFromSetExpressCheckoutResponse
+
+page 28
+
+Immediate Payment
+Immediate Payment ensures a buyer pays for a purchase immediately after commiting to it.
+-p 101
+ 
+
+**contains topics that contains what we most likely to learn
+Paypal Checkout User Interface Guide **
+ PayPal Payments Standard Integration Guide**WebsitePaymentsStandard Integration Guide**
+
+product discount/multiple discount on different items also for % based discounts single and multiple discount is allowed
+pge 247, 286 -- 316
+option #1 i had working sample already
+Adds Add to Cart, Checkout Buttons, when clicked cart is viewed after logging into the paypal account, customizable product sizes, and varying colors and prices is supported in htmlform
+
+Option #2 - i had working sample already
+Third-Party Shopping Carts – The
+Cart Upload Command
+
+Third-party shopping carts integrate PayPal Payments Standard on behalf of PayPal
+merchants. Third-party carts use the Cart Upload command to pass the contents of shopping
+carts to PayPal for checkout and payment processing.
+NOTE: If you are not a shopping cart developer, you can add a PayPal Shopping Cart to your
+site that is hosted by PayPal.
+Read the following topics to learn more about third-party shopping carts:
+ “The Checkout Experience With the Cart Upload Command” on page 317
+ “Implementing the Cart Upload Command” on page 322
+ “Implementing the Instant Update API With the Cart Upload Command” on page 326
+
+page 317 - 336
+
+Securing Your PayPal Payments
+Standard Buttons
+page 337
+
+Unprotected and non-encrypted buttons that are not saved in your PayPal account are in plain
+text in the source view of your webpages. The HTML button code for your payment buttons
+can be viewed by anyone. A malicious third party could copy a page, change button HTML
+variables such as price, and make fraudulent payments.
+IMPORTANT: Merchants with significant payment volume are required to take precautions
+on securing PayPal Payment Standard buttons.
+PayPal provides the following strategies for securing PayPal Payments Standard buttons. Use
+one or more of the following security strategies to prevent and/or detect tampering with your
+buttons:
+
+How Protected Payment Buttons Help Prevent Fraudulent Payments
+Protected payment buttons help secure your payments because the HTML button code that
+PayPal generates and that you paste onto your webpages is encrypted. HTML button code that
+is protected with encryption cannot be altered by malicious third parties to create fraudulent
+payments.
+You can protect the HTML button code that PayPal generates for any kind of payment button:
+ Buy Now buttons
+ Add to Cart buttons
+ Buy Gift Certificate buttons
+ Subscribe buttons
+ Automatic Billing buttons
+Installment Plan buttons
+Donate buttons
+NOTE: PayPal cannot protect HTML button code for Add to Cart buttons with JavaScript
+disabled in your browser. In such cases, use an alternative strategy to secure your
+buttons. See “Reconciling Payments Manually Through Transaction History” on
+page 341, and “Reconciling Payments Through Instant Payment Notification” on
+page 342.
+
+Testing Payment Buttons in the
+PayPal Sandbox page 405
+The PayPal Sandbox can be used to test the following functionality:
+ Buy Now buttons – Test single-item payments.
+For more information, see Chapter 1, “Single-Item Payments – Buy Now Buttons.”
+ Subscribe buttons – Test recurring payments.
+For more information, see Chapter 3, “Recurring Payments – Subscribe Buttons.”
+ Donate buttons – Test contribution payments.
+For more information, see Chapter 2, “Contribution Payments – Donate Buttons.”
+ Shopping Cart buttons – Test multiple-item payments in a single purchase transaction.
+For more information, see Chapter 6, “The PayPal Shopping Cart – Add to Cart and View
+Cart Buttons.”
+ Refunds – Test the refunding of money paid by PayPal members.
+For more information, see Chapter 11, “Issuing Refunds.”
+ Payment Data Transfer – Test your identity token, return URL, and Payment Data
+Transfer settings.
+To learn more, see the Payment Data Transfer page on Developer Central.
+ Instant Payment Notification – Test Instant Payment Notification messages for payments
+and reversals.
+Instant Payment Notification messages in the Sandbox environment include the special
+ipn_test variable, set to the value 1. This variable lets your code differentiate between
+Instant Payment Notification messages in the Sandbox and Instant Payment Notification
+messages from the live PayPal website. Use the ipn_test variable to develop scripts that
+work in both situations.
+IMPORTANT: Instant Payment Notification messages that come from the Sandbox cannot
+be verified against the live PayPal website, and Instant Payment
+Notification messages that come from the live PayPal website cannot be
+verified against the Sandbox.
+For more information about implementing Instant Payment Notification, see the Instant
+Payment Notification Guide.
+ Simulated transactions – Test scenarios, such as successful and failed eChecks.
+To test in the Sandbox, create a Developer Central account. Then create multiple PayPal
+test accounts for buyers and merchants so that you can simulate different scenarios.
+IMPORTANT: The Sandbox does not process real money.
+For more information, see the Sandbox User Guide.
+
+PayPal Payments Pro Integration Guide
+- Direct Payment - asks only credit card
+- Express Checkout - logs into paypal account and finish the transaction
+
+Merchant Setup and Administration Guide  
+Learn how merchants set up and administer their accounts, including setting their credit card statement names, blocking certain kinds of payment, adding users to their accounts, managing multiple currency balances, creating custom payment pages, getting contact numbers from payers, and working with transaction history.

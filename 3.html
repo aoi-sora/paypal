@@ -1,0 +1,90 @@
+<!doctype>
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<style>
+  .product-image { border:solid 1px #ccc; }
+  .product-title, .product-price, .product-shipping { font-weight:bold; }
+  .data-cell { padding:0px 50px 0px 10px;border:solid 0px #fff;vertical-align:top}
+  .align-cart { padding-left:480px }
+  .product img {width:160px;}
+</style>
+</head>
+<body>
+<p>
+Uses Saved Buttons on Sandbox made by the merchant - Add To Cart, with product discount - Paypal Payment Standard Approach
+</p>
+ <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+
+<table>
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/chocolate-marjolaine-pic.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Chocolate Marjolaine</div>
+       
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+	  <input type="hidden" name="hosted_button_id" value="EFEPRH5LRMDGY">
+	  
+		<input type="hidden" name="on0" value="Size">Size 
+		<select name="os0">
+			<option value="Slice">Slice $45.00 USD</option>
+			<option value="Half">Half $150.00 USD</option>
+			<option value="Whole">Whole $300.00 USD</option>
+		</select>	  
+		<input type="hidden" name="item_name_1" value="Chocolate Marjolaine"> 
+		<input type="hidden" name="currency_code" value="USD">
+		<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">		<br/>
+		Qty <input type="text" name="quantity_0" value="2"/>
+    </td>
+  </tr>
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/Red-Ribbon-Bakeshop-Black-Forest-Cake.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Blackforest Cake</div>
+      
+      <input type="hidden" name="hosted_button_id" value="JB5JDM8P3H8GG">
+	  <input type="hidden" name="on1" value="Size">Size
+	  <select name="os1">
+		<option value="Slice">Slice $50.00 USD</option>
+		<option value="Half">Half $200.00 USD</option>
+		<option value="Whole">Whole $350.00 USD</option>
+	  </select>
+	  <input type="hidden" name="item_name_2" value="Black Forest Cake"> 
+	<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">	 <br/>
+		Qty <input type="text" name="quantity_1" value="3"/>	
+    </td>
+  </tr> 
+  <tr>
+	<td align="center" colspan="2">
+	<!-- view cart -->
+		<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHBwYJKoZIhvcNAQcEoIIG+DCCBvQCAQExggE6MIIBNgIBADCBnjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMA0GCSqGSIb3DQEBAQUABIGAkmUOQZa5F/oJqQ/DBpf3g+IfmORbwO0f36QuyBfTR8GfW8QteIE1utyno7hsC2qdgekm94OVfUegs1uTjRoI6eKNjTTUKE9B+MhrBDlNUocXLMqMGDYGFjhTYl0Rsh6uhQSrPV5G/YWSkReBhnvJWAIryH2TUNxmBwG0xDxedjwxCzAJBgUrDgMCGgUAMFMGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQI4HBAcywEUAuAMN+FC/rme/uZOIHT1qD0GGrkfm+YdJAVV1pnOfP9hHA25DqIGaCOAOQFj7sVEYZJsKCCA6UwggOhMIIDCqADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGYMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTERMA8GA1UEBxMIU2FuIEpvc2UxFTATBgNVBAoTDFBheVBhbCwgSW5jLjEWMBQGA1UECxQNc2FuZGJveF9jZXJ0czEUMBIGA1UEAxQLc2FuZGJveF9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwNDE5MDcwMjU0WhcNMzUwNDE5MDcwMjU0WjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3luO//Q3So3dOIEv7X4v8SOk7WN6o9okLV8OL5wLq3q1NtDnk53imhPzGNLM0flLjyId1mHQLsSp8TUw8JzZygmoJKkOrGY6s771BeyMdYCfHqxvp+gcemw+btaBDJSYOw3BNZPc4ZHf3wRGYHPNygvmjB/fMFKlE/Q2VNaic8wIDAQABo4H4MIH1MB0GA1UdDgQWBBSDLiLZqyqILWunkyzzUPHyd9Wp0jCBxQYDVR0jBIG9MIG6gBSDLiLZqyqILWunkyzzUPHyd9Wp0qGBnqSBmzCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAVzbzwNgZf4Zfb5Y/93B1fB+Jx/6uUb7RX0YE8llgpklDTr1b9lGRS5YVD46l3bKE+md4Z7ObDdpTbbYIat0qE6sElFFymg7cWMceZdaSqBtCoNZ0btL7+XyfVB8M+n6OlQs6tycYRRjjUiaNklPKVslDVvk8EGMaI/Q+krjxx0UxggGkMIIBoAIBATCBnjCBmDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExETAPBgNVBAcTCFNhbiBKb3NlMRUwEwYDVQQKEwxQYXlQYWwsIEluYy4xFjAUBgNVBAsUDXNhbmRib3hfY2VydHMxFDASBgNVBAMUC3NhbmRib3hfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMjEwMjQwMzU3MDJaMCMGCSqGSIb3DQEJBDEWBBQrzmI+/dJuisZPCN5gNF82glNxujANBgkqhkiG9w0BAQEFAASBgCLeTVCqze965YyW2M8nHvHYkDgE8IFUJh8PtNtv42/wOPJQlXicz4vK+zlGWgPDjzKL4ymd4vHjL2MsSQS62bpoIS9K7jzqdgNlyCodqpLb2BdAl8A2kRldFNyeaLUSy/z2Ys9BTuKy1Rlz0faVZY8sVzDQH5DYE+ZBAd0t2DjZ-----END PKCS7-----
+		">
+		<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">	
+	 
+	</td>
+  </tr>
+    
+</table>
+
+
+ 
+
+ 
+ 
+ 
+
+ 
+</form>
+
+</body>
+</html>

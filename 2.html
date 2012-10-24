@@ -1,0 +1,117 @@
+<!doctype>
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<style>
+  .product-image { border:solid 1px #ccc; }
+  .product-title, .product-price, .product-shipping { font-weight:bold; }
+  .data-cell { padding:0px 50px 0px 10px;border:solid 0px #fff;vertical-align:top}
+  .align-cart { padding-left:480px }
+  .product img {width:160px;}
+</style>
+</head>
+<body>
+<p>
+Method #2 integrating with your custom shopping cart. You as buyer with paypal account signs in to finish the transaction.
+In this sample we use the paypal sandbox url and the sandbox buyer account
+<br/>
+ This method is Paypal Cart Upload Approach
+<br/>
+IMPORTANT : 
+Make sure you aren't currently logged in (especially as merchant) in recent sandbox paypal access. Log Out first otherwise
+paypal refuse to continue the transaction login especially if your recent login is using merchant account
+</p>
+<table>
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/chocolate-marjolaine-pic.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Chocolate Marjolaine</div>
+      <div class="product-price">Price: $12.99</div>
+      <div class="product-shipping">Shipping: $4.99</div><br/>
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+    </td>
+  </tr>
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/Red-Ribbon-Bakeshop-Black-Forest-Cake.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Blackforest Cake</div>
+      <div class="product-price">Price: $14.99</div>
+      <div class="product-shipping">Shipping: $4.99</div><br/>
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+    </td>
+  </tr>  
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/blue-cheesecake.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Blueberry cheesecake</div>
+      <div class="product-price">Price: $14.99</div>
+      <div class="product-shipping">Shipping: $4.99</div><br/>
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+    </td>
+  </tr>  
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/chicago-cheesecake.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Chicago cheesecake</div>
+      <div class="product-price">Price: $13.99</div>
+      <div class="product-shipping">Shipping: $4.99</div><br/>
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+    </td>
+  </tr>  
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/chocolate-fudge.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Chocolate Fudge Cheesecake</div>
+      <div class="product-price">Price: $10.99</div>
+      <div class="product-shipping">Shipping: $4.99</div><br/>
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+    </td>
+  </tr>
+  <tr class="product">
+    <td><img class="product-image" 
+      src="images/triple-decker.jpg"/>
+    </td>
+    <td class="data-cell">
+      <div class="product-title">Triple Decker Cheesecake</div>
+      <div class="product-price">Price: $16.99</div>
+      <div class="product-shipping">Shipping: $4.99</div><br/>
+      <div role="button" alt="Add to cart" tabindex="0" class="googlecart-add-button">
+      </div>
+    </td>
+  </tr>   
+</table>
+<!-- replace action with the sandbox for testing purpose, use buyer email account created at the sandbox -->
+<form _action="https://www.paypal.com/cgi-bin/webscr"  action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">  
+ <input type="hidden" name="cmd" value="_cart"> 
+ <input type="hidden" name="upload" value="1"> 
+ <input type="hidden" name="business" value="aoi_so_1347518748_biz@yahoo.com"><!-- seller/merchant paypal account (sandbox in this example) --> 
+ <input type="hidden" name="item_name_1" value="Blueberry Cheesecake"> 
+ <input type="hidden" name="quantity_1" value="3"> 
+ <input type="hidden" name="amount_1" value="99.00"> 
+ <input type="hidden" name="shipping_1" value="1.75"> 
+ <input type="hidden" name="item_name_2" value="Chocolate Fudge Cheesecake"> 
+ <input type="hidden" name="amount_2" value="89.00"> 
+ <input type="hidden" name="shipping_2" value="2.50"> 
+ <input type="hidden" name="item_name_3" value="Triple Decker Cheesecake"> 
+ <input type="hidden" name="amount_3" value="89.00"> 
+ <input type="hidden" name="shipping_3" value="2.50">  
+ <input type="submit" value="Checkout with PayPal"> 
+</form>
+</body>
+</html>
